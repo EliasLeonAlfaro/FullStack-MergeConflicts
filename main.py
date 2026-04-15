@@ -1,17 +1,19 @@
 ﻿def procesar_nombre(entrada):
-    # 1. Limpieza: Quitar espacios laterales
+    # 1. Limpieza
     nombre_limpio = entrada.strip()
     
-    # 3. Seguridad: Ignorar si queda vacío
+    # 3. Seguridad: Si después de strip() está vacío, retornamos None
     if not nombre_limpio:
-        return None  # O puedes lanzar un error o retornar un mensaje
+        return None
     
-    # 2. Normalización: Formato "Nombre"
-    nombre_normalizado = nombre_limpio.capitalize()
-    
-    return nombre_normalizado
+    # 2. Normalización
+    return nombre_limpio.capitalize()
 
 if __name__ == "__main__":
     nombres_sucios = ["  juan", "ALICIA", " ", "  rOberto  ", "", "   ", "cRisToBal ", "AgustinA"]
-    resultado = procesar_nombres(nombres_sucios)
+    
+    # OPCIÓN A: Crear una nueva lista filtrando los None
+    # Esta es la forma más profesional de hacerlo
+    resultado = [procesar_nombre(n) for n in nombres_sucios if procesar_nombre(n) is not None]
+    
     print(f"Resultado final: {resultado}")
