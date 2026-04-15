@@ -11,16 +11,6 @@
     
     return nombre_normalizado
 
-# Ejemplos de uso:
-entradas = ["  elias  ", "   ", "JOAQUIN", "  JOAlias  "]
-
-for e in entradas:
-    resultado = procesar_nombre(e)
-    if resultado:
-        print(f"Procesado: '{resultado}'")
-    else:
-        print("Entrada ignorada por estar vacía.")
-
 if __name__ == "__main__":
     nombres_sucios = ["  juan", "ALICIA", " ", "  rOberto  ", "", "   ", "cRisToBal ", "AgustinA"]
     resultado = procesar_nombres(nombres_sucios)
