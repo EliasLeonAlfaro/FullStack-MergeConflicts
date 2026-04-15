@@ -10,6 +10,6 @@ def procesar_nombres(lista_nombres):
     return nombres_limpios
 
 if __name__ == "__main__":
-    datos_sucios = ["  juan", "MARÍA", " ", "  ", "lUis", ""]
+    datos_sucios = ["  juan", "ALICIA", " ", "  rOberto  ", "", "   ", "cRisToBal ", "AgustinA"]
     resultado = procesar_nombres(datos_sucios)
     print(f"Resultado final: {resultado}")
