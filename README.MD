@@ -3,7 +3,7 @@
 ¡Bienvenido al proyecto! Para mantener la integridad de nuestro código, no permitimos cambios directos en la rama principal. Debes proponer tus mejoras mediante un **Pull Request**.
 
 ## 📋 Tu Misión
-Debes implementar la lógica de limpieza de nombres en `procesador_datos.py` para que la función `procesar_nombres` cumpla con:
+Debes implementar la lógica de limpieza de nombres en `main.py` para que la función `procesar_nombres` cumpla con:
 1. **Limpieza:** Quitar espacios en blanco laterales.
 2. **Normalización:** Formato "Nombre" (Mayúscula inicial, resto minúscula).
 3. **Seguridad:** Ignorar cualquier entrada que esté vacía después de limpiar.
@@ -23,13 +23,13 @@ cd nombre-del-repo
 Implementa la lógica en el archivo. Verifica que funcione ejecutando:
 
 ```bash
-python procesador_datos.py
+python main.py
 ```
 
 ### 3. Subir cambios a tu Fork
 
 ```bash
-git add procesador_datos.py
+git add main.py
 git commit -m "Implementación de lógica de limpieza"
 git push origin main
 ```
@@ -46,7 +46,7 @@ Para solucionar esto desde tu máquina:
 Agrega el repositorio original como remoto:
 
 ```bash
-git remote add upstream https://github.com/EricRamirezS/FullStack-MergeConflicts.git```
+git remote add upstream https://github.com/EricRamirezS/FullStack-MergeConflicts.git
 ```
 
 Trae los cambios del profesor:
