@@ -1,15 +1,15 @@
 def procesar_nombres(lista_nombres):
-    """
-    Recibe una lista de nombres y debe devolver una lista 
-    con los nombres limpios (sin espacios extra) y en formato correcto.
-    """
-    return [n.strip().capitalize() for n in lista_nombres if n.strip()]
+    nombres_limpios = []
+    
+    for nombre in lista_nombres:
+        nombre_limpio = nombre.strip()
+        # Seguridad: Si después de limpiar no está vacío, lo procesamos
+        if nombre_limpio:
+            nombres_limpios.append(nombre_limpio.capitalize())
+            
+    return nombres_limpios
 
 if __name__ == "__main__":
-    nombres_sucios = ["  juan", "ALICIA", " ", "  rOberto  ", "", "   ", "cRisToBal ", "AgustinA"]
-    
-    # OPCIÓN A: Crear una nueva lista filtrando los None
-    # Esta es la forma más profesional de hacerlo
-    resultado = [procesar_nombre(n) for n in nombres_sucios if procesar_nombre(n) is not None]
-    
+    datos_sucios = ["  juan", "MARÍA", " ", "  ", "lUis", ""]
+    resultado = procesar_nombres(datos_sucios)
     print(f"Resultado final: {resultado}")
