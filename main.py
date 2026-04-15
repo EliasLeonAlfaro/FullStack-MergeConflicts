@@ -1,13 +1,9 @@
-﻿def procesar_nombre(entrada):
-    # 1. Limpieza
-    nombre_limpio = entrada.strip()
-    
-    # 3. Seguridad: Si después de strip() está vacío, retornamos None
-    if not nombre_limpio:
-        return None
-    
-    # 2. Normalización
-    return nombre_limpio.capitalize()
+def procesar_nombres(lista_nombres):
+    """
+    Recibe una lista de nombres y debe devolver una lista 
+    con los nombres limpios (sin espacios extra) y en formato correcto.
+    """
+    return [n.strip().capitalize() for n in lista_nombres if n.strip()]
 
 if __name__ == "__main__":
     nombres_sucios = ["  juan", "ALICIA", " ", "  rOberto  ", "", "   ", "cRisToBal ", "AgustinA"]
